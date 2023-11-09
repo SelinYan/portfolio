@@ -192,7 +192,7 @@ div {
 .grid-container {
     display: grid;
     gap: 0.4rem;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-column: 1 / span 6;
     grid-row: 1 / span 6;
@@ -255,4 +255,54 @@ div {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
+}
+
+.form-wrap {
+background-color: #333;
+text-align: center;
+margin: 0 auto;
+padding: 0;
+justify-content: space-between;
+}
+
+.form-group {
+    margin: 30px;
+    padding: 10px;
+    display: block;
+    
+}
+
+.form-group label {
+    display: inline-block;
+    margin-right: 100px;
+}
+
+
+.form-group input {
+    width: 30%;
+    height: 30px;
+    border: 1px solid #a7a7a7;
+    border-radius: 5px;
+    
+}
+
+.form-wrap h3,
+.form-wrap p {
+    margin: 30px;
+}
+
+.form-wrap p {
+    margin-bottom: 0px;
+}
+
+.form-wrap button {
+    background-color: #FF6F91;
+    width: 20%;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-wrap button:hover {
+    background: #845EC2;
 }
