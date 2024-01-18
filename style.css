@@ -15,6 +15,8 @@ body {
     background: linear-gradient(43deg, #4D2B84, #845EC2,#00C9A7);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
 section,
@@ -24,9 +26,11 @@ header {
 }
 
 section {
-    margin: 2rem;
-    margin-top: 100px;
-    margin-bottom: 200px;
+    scroll-margin-top: 100px;
+    width: 100%;       
+    margin: 2rem 0;  
+    max-width: 1400px; 
+    align-items: center;
 }
 
 header {
@@ -46,7 +50,7 @@ li {
     padding: 1rem;
 }
 
-img#logo {
+#logo {
     width: 5rem;
     height: 5rem;
     top: 0;
@@ -56,6 +60,7 @@ img#logo {
 li {
     list-style: none;
 }
+
 
 h1 {
     font-size: 3rem;
@@ -94,7 +99,7 @@ h4 {
     margin-bottom: 200px;
 }
 
-img#profile {
+#profile {
     width: 300px;
     height: auto;
   }
@@ -148,23 +153,21 @@ img#profile {
 }
 
 #skills {
-    margin: 10rem;
-    justify-content: center;
+    margin: 10rem 0;
+    display: flex;
+}
+
+.skills-box {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .bar {
     width: 100%;
     background-color: #FBEAFF;
 }
-
-.skills {
-    text-align: right; 
-    padding-top: 10px; 
-    padding-bottom: 10px; 
-    color:#00C9A7;
-    font-weight: bold;
-  }
 
 .html {width: 90%; background-color: #FF6F91} 
 .css {width: 80%; background-color: #FF6F91} 
@@ -180,11 +183,12 @@ img#profile {
     margin: 1rem;
 }
 
-.skills-box {
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.skills {
+    text-align: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #00C9A7;
+    font-weight: bold;
 }
 
 .icons {
@@ -290,7 +294,8 @@ padding: 20px;
 }
 
 .form-group label {
-    text-align: left;
+    width: 150px;
+    text-align: right;
     display: inline-block;
     margin-bottom: 5px;
 }
@@ -322,4 +327,34 @@ padding: 20px;
 
 .form-wrap button:hover {
     background: #845EC2;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    .home-page {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #logo {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    nav {
+        margin-top: 1rem;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav li {
+        margin-bottom: 0.5rem;
+    }
 }
